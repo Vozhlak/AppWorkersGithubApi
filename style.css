@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.app {
+  font-family: 'Roboto', sans-serif;
+  background-color: #E5E5E5;
+}
+
+.wrap {
+  max-width: 660px;
+  height: 100vh;
+  background-color: #C4C4C4;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 62px 84px;
+  padding-bottom: 15px;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 45px;
+  height: 250px;
+  overflow: auto;
+}
+
+.visible {
+  display: flex;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 28px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.search-input::placeholder {
+  font-family: 'Roboto', sans-serif;
+}
+
+.result-item {
+  font-size: 28px;
+  border: 2px solid black;
+  padding: 5px;
+  transition: background-color .25s ease-in;
+  background-color: #E3E3E3;
+}
+
+.result-item:hover {
+  background-color: aqua;
+  transition: background-color .25s ease-out;
+}
+
+.not-result-item:hover {
+  background-color: #E3E3E3;
+}
+
+.wrap-list {
+  width: 100%;
+  height: 322.5px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  
+}
+
+.list-item {
+  background-color: #E27BEB;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 15px;
+}
+
+.list-item-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+}
+
+.btn-delete {
+  position: relative;
+  width: 42px;
+  height: 38.5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.btn-delete::before,
+.btn-delete:after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 38.5px;
+  background-color: red;
+  top: 0;
+}
+
+.btn-delete::before {
+  transform: rotate(45deg);
+}
+
+.btn-delete::after {
+  transform: rotate(-45deg);
+}
+
+.wrap-not-result {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 250px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.text-not-result {
+  align-self: center;
+}
+
+.none {
+  display: none !important;
+}
